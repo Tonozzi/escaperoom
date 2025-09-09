@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Russian house- Escape Room</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>The russian house</h1>
+      <p class="subtitle">Escape da casa encontrando letras perdidas</p>
+    </header>
+
+    <div class="map-container">
+      <div class="map-title">mapa</div>
+      <div class="map-room" id="map-sala1">Hall</div>
+      <div class="map-room" id="map-sala2">Sala de Chá</div>
+      <div class="map-room" id="map-sala3">Biblioteca</div>
+      <div class="map-room" id="map-sala4">Quarto</div>
+      <div class="map-room" id="map-sala5">Ático</div>
+      <div class="map-room" id="map-sala6">Jardim Invernal</div>
+    </div>
+
+    <div class="game-area">
+      <div class="output-container">
+        <div id="output"></div>
+      </div>
+
+      <div class="input-area">
+        <input type="text" id="input" placeholder="digitar comando em infinitivo...">
+        <button id="submit-btn">enviar</button>
+      </div>
+
+      <div class="buttons">
+        <button id="help-btn">ajudar</button>
+        <button id="look-btn">olhar</button>
+        <button id="inventory-btn">inventário</button>
+        <button id="diary-btn">diário</button>
+      </div>
+
+      <div class="directions" style="display:flex; gap:10px; align-items:center;">
+        <button class="dir-btn" data-dir="oeste">←</button>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <button class="dir-btn" data-dir="norte">↑</button>
+          <button class="dir-btn" data-dir="sul">↓</button>
+        </div>
+        <button class="dir-btn" data-dir="leste">→</button>
+      </div>
+
+      <div class="inventory-display">
+        <div class="inventory-title">Mochila (0/5 slots):</div>
+        <div class="inventory-items" id="inventory-items">
+          <div class="inventory-item">Vazio</div>
+          <div class="inventory-item">Vazio</div>
+          <div class="inventory-item">Vazio</div>
+          <div class="inventory-item">Vazio</div>
+          <div class="inventory-item">Vazio</div>
+        </div>
+      </div>
+
+      <div class="diary-display">
+        <div class="diary-title">diário:</div>
+        <div class="diary-content" id="diary-content">_ _ _ _ _ _</div>
+      </div>
+
+      <p class="command-hint">
+        utilize os botões de direção ou digite comandos como:
+        <em>sair Sala de Chá</em>, <em>pegar lanterna</em>, <em>usar lanterna xícara</em>, <em>ler diário</em>, 
+        <em>abrir baú trancado</em>, <em>finalizar</em>
+      </p>
+    </div>
+  </div>
+
+  <script type="module" src="ui.js"></script>
+</body>
+</html>
